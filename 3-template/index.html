@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <template id="nav-bar">
+      <style>
+        h2 {
+          color: green;
+        }
+      </style>
+      <h2>
+        <slot>Default Title</slot>
+      </h2>
+    </template>
+
+    <nav-bar></nav-bar>
+
+    <nav-bar>
+      Big Tite
+    </nav-bar>
+  </body>
+</html>

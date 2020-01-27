@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="./main.js"></script>
+  </head>
+  <body>
+    <template id="main-layout">
+      <style>
+        .header {
+          margin: 0px;
+          color: green;
+        }
+        .content {
+          margin: 10px;
+          font-size: 14px;
+        }
+        .footer {
+          margin: 10px;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      </style>
+      <header class="header">
+        <slot name="header">Title</slot>
+      </header>
+      <section class="content">
+        <slot name="content">Content</slot>
+      </section>
+      <footer class="footer">
+        <slot name="footer">Footer</slot>
+        <p>2020 - Web Components examples</p>
+      </footer>
+    </template>
+
+    <main-layout></main-layout>
+
+    <main-layout>
+      <h2 slot="header">Home</h2>
+      <p slot="content">Lorem ipsum</p>
+      <p slot="footer">Template example</p>
+    </main-layout>
+
+    <main-layout>
+      <h2 slot="header">About</h2>
+      <p slot="content">Jesus Escamila</p>
+      <p slot="footer">Template example</p>
+    </main-layout>
+  </body>
+</html>
